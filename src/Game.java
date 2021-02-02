@@ -48,17 +48,17 @@ public class Game {
                 ArrayList<Card> playerCards = new ArrayList<Card>();
 
                 System.out.println();
-
+                
                 Card computerCard = this.computer.drawCard();
                 Card playerCard = this.player.drawCard();
-
+                            
                 computerCards.add(computerCard);
                 playerCards.add(playerCard);
 
                 while (computerCard.getValue() == playerCard.getValue()) {
+                    System.out.println();
                     System.out.println("[TIE] It's a tie! Battling again.....");
-
-                    this.drawMessage(computerCard, playerCard);
+                    System.out.println();
 
                     computerCard = this.computer.drawCard();
                     playerCard = this.player.drawCard();
@@ -106,19 +106,6 @@ public class Game {
                 input = this.prompt();
             }
         }
-    }
-
-    /**
-     * Prints a message that the cards are a draw
-     * 
-     * @param computerCard the card the computer drawn
-     * @param playerCard   the card the player drawn
-     * @return void
-     */
-    private void drawMessage(Card computerCard, Card playerCard) {
-        System.out.println();
-        System.out.println("[DRAW] You drew a " + playerCard.getSuit() + " of " + playerCard.getFace());
-        System.out.println("[DRAW] The computer drew a " + computerCard.getSuit() + " of " + computerCard.getFace());
     }
 
     /**
