@@ -3,6 +3,11 @@ import java.util.ArrayList;
 public class Deck {
     private ArrayList<Card> deck = new ArrayList<Card>();
 
+    /**
+     * Creates a new deck with 52 cards
+     * 
+     * @return void
+     */
     public Deck() {
         // Regular cards
         for (int i = 0; i < 9; i++) {
@@ -37,6 +42,11 @@ public class Deck {
         this.deck = shuffled;
     }
 
+    /**
+     * Splits the deck into two
+     * 
+     * @return half of the deck
+     */
     public ArrayList<Card> split() {
         ArrayList<Card> cards = new ArrayList<Card>();
 
