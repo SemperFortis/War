@@ -36,10 +36,7 @@ public class Game {
                 System.out.println();
                 System.out.println(
                         this.player.empty() ? "[LOST] You lost this game of War!" : "[WON] You won this game of War!");
-                return;
-            }
-
-            if (input.equalsIgnoreCase("s")) {
+            } else if (input.equalsIgnoreCase("s")) {
                 this.player.shuffle();
 
                 input = this.prompt();
@@ -80,7 +77,7 @@ public class Game {
                         this.computer.addCard(playerCards.remove(i));
                     }
 
-                    this.cardMessage("Computer", count);
+                    this.cardMessage("The computer", count);
 
                     computerCards.clear();
                     playerCards.clear();

@@ -43,7 +43,7 @@ public class Player {
     public Card drawCard() {
         Card card = this.hand.remove(0);
 
-        System.out.println(this.name + " drew a " + card.getValue() + " of " + card.getFace());
+        System.out.println(this.name + " drew a " + card.getSuit() + " of " + card.getFace());
 
         return card;
     }
